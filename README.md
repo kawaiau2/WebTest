@@ -6,7 +6,7 @@ Project Description:  Automation test for HK01 Web writen test
 
 Installation:
 1. If installed mvn and java
-    a. mvn install
+    1. mvn install
 
 2. If no mvn:
     1. Download maven in http://maven.apache.org/download.cgi
@@ -17,7 +17,7 @@ Installation:
     4. Restart Terminal
 
 3. If no JAVA:
-    use follow command:
+    1. use follow command:
         curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-macosx-x64.dmg > jdk-8u121-macosx-x64.dmg
         hdiutil attach jdk-8u121-macosx-x64.dmg
         sudo installer -pkg /Volumes/JDK\ 8\ Update\ 121/JDK\ 8\ Update\ 121.pkg -target /
