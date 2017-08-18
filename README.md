@@ -7,5 +7,5 @@ Project Description:  Automation test for HK01 Web writen test
 Installation:
 mvn install
 
-Test Execution
+Test Execution:
 mvn test
