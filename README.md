@@ -1,4 +1,4 @@
-Project Description:  Automation test for HK01 Web writen test
+Project Description:  Automation test for Web writen test
 
 1. Check article title
 2. Check login button
@@ -6,7 +6,7 @@ Project Description:  Automation test for HK01 Web writen test
 
 Installation:
 1. If installed mvn and java
-    1. mvn install
+    1. mvn clean install
 
 2. If no mvn:
     1. brew install maven
