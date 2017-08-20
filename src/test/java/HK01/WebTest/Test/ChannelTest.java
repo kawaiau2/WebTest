@@ -11,18 +11,17 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import HK01.WebTest.Base;
+import HK01.WebTest.BaseTest;
 import HK01.WebTest.Pages.HkChannel;
 
-public class ChannelTest {
-	public WebDriver driver;
+public class ChannelTest extends BaseTest{
+	private WebDriver driver;
 	public HkChannel channelPage;
 	
 	@BeforeTest
 	public void beforeTest() {
-		Base b = new Base();
-		driver = b.getDriver();
-		driver.get(b.getSectionLink("港聞"));
+		driver = getDriver();
+		driver.get(getSectionLink("港聞"));
 		driver.manage().window().maximize();
 		channelPage = new HkChannel(driver);
 	}

@@ -7,18 +7,17 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import HK01.WebTest.Base;
+import HK01.WebTest.BaseTest;
 import HK01.WebTest.Pages.HkArticle;
 
-public class ArticleTest {
-	public WebDriver driver;
-	public HkArticle articlePage;
+public class ArticleTest extends BaseTest{
+	private WebDriver driver;
+	private HkArticle articlePage;
 	
 	@BeforeTest
 	public void beforeTest() {
-		Base b = new Base();
-		driver = b.getDriver();
-		driver.get(b.getArticleLink("港聞", "79555", "-一契多伙-避稅成風政府不修例-學者-現階段無計可施"));
+		driver = getDriver(DriverType.firefox);
+		driver.get(getArticleLink("港聞", "79555", "-一契多伙-避稅成風政府不修例-學者-現階段無計可施"));
 		driver.manage().window().maximize();
 		articlePage = new HkArticle(driver);
 	}

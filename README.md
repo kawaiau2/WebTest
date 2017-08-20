@@ -9,12 +9,7 @@ Installation:
     1. mvn install
 
 2. If no mvn:
-    1. Download maven in http://maven.apache.org/download.cgi
-    2. Unzip and install the file
-    3. Add follow to ~/.bash_profile
-        export M2_HOME=/Users/mkyong/apache-maven-3.1.1
-        export PATH=$PATH:$M2_HOME/bin 
-    4. Restart Terminal
+    1. brew install maven
 
 3. If no JAVA:
     1. use follow command:
@@ -24,6 +19,11 @@ Installation:
         3. sudo installer -pkg /Volumes/JDK\ 8\ Update\ 121/JDK\ 8\ Update\ 121.pkg -target /
         4. diskutil umount /Volumes/JDK\ 8\ Update\ 121
         5. rm jdk-8u121-macosx-x64.dmg
+
+Support Driver:
+1. Chrome
+2. Safari (p.s. Enable the 'Allow Remote Automation' option in Safari's Develop menu)
+3. FireFox
 
 Test Execution:
 1. mvn test
