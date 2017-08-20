@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import HK01.WebTest.BaseTest;
+import HK01.WebTest.BaseTest.DriverType;
 import HK01.WebTest.Pages.HkArticle;
 
 public class ArticleTest extends BaseTest{
@@ -16,7 +17,7 @@ public class ArticleTest extends BaseTest{
 	
 	@BeforeTest
 	public void beforeTest() {
-		driver = getDriver(DriverType.firefox);
+		driver = getDriver(DriverType.chrome);
 		driver.get(getArticleLink("港聞", "79555", "-一契多伙-避稅成風政府不修例-學者-現階段無計可施"));
 		driver.manage().window().maximize();
 		articlePage = new HkArticle(driver);

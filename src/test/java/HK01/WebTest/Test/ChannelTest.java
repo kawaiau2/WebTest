@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import HK01.WebTest.BaseTest;
+import HK01.WebTest.BaseTest.DriverType;
 import HK01.WebTest.Pages.HkChannel;
 
 public class ChannelTest extends BaseTest{
@@ -20,7 +21,7 @@ public class ChannelTest extends BaseTest{
 	
 	@BeforeTest
 	public void beforeTest() {
-		driver = getDriver();
+		driver = getDriver(DriverType.chrome);
 		driver.get(getSectionLink("港聞"));
 		driver.manage().window().maximize();
 		channelPage = new HkChannel(driver);

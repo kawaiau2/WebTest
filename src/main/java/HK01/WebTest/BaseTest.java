@@ -32,7 +32,6 @@ public class BaseTest {
 				break;
 			default:
 				System.setProperty("webdriver.gecko.driver","src//main//resources//geckodriver-mac-64bit");
-//				System.setProperty("webdriver.gecko.driver","geckodriver");
 				DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 				capabilities.setCapability("marionette", true);
 				driver = new FirefoxDriver();
