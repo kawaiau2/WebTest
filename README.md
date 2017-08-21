@@ -21,9 +21,7 @@ Installation:
         5. rm jdk-8u121-macosx-x64.dmg
 
 Support Driver:
-1. Chrome
-2. Safari (p.s. Enable the 'Allow Remote Automation' option in Safari's Develop menu)
-3. FireFox
+1. Chrome (Please install Chrome browser first)
 
 Test Execution:
 1. mvn test
