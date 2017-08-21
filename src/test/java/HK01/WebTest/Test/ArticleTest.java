@@ -31,6 +31,6 @@ public class ArticleTest extends BaseTest{
 	
 	@Test
 	public void CheckTitle(){
-		assertEquals(articlePage.getArticleTitle().getText(), "「一契多伙」避稅成風政府不修例　學者：現階段無計可施");
+		assertEquals(articlePage.getArticleTitle(), "「一契多伙」避稅成風政府不修例　學者：現階段無計可施");
 	}
 }

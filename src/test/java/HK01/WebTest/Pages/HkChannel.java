@@ -4,21 +4,31 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import HK01.WebTest.BaseTest;
+import HK01.WebTest.BasePage;
+import org.openqa.selenium.support.FindBy;
 
-public class HkChannel extends BaseTest{
-	public WebDriver driver;
-	public HkChannel (WebDriver driver){	
-		this.driver = driver;
+public class HkChannel extends BasePage{
+	@FindBy (className = "date")
+	private WebElement pageDate;
+
+	@FindBy (className = "member_btn")
+	private WebElement memberButton;
+
+	@FindBy (className = "menu__top__member_beforelogin")
+	private WebElement loginDialog;
+
+	public HkChannel(WebDriver driver) {
+		super(driver);
 	}
 	
-	public WebElement getPageDate() {
-		return driver.findElement(By.className("date"));
+	public String getPageDate() {
+		return this.pageDate.getText();
 	}
-	public WebElement getMemberButton() {
-		return driver.findElement(By.className("member_btn"));
+	public void clickMemberButton() {
+		this.memberButton.click();
 	}
-	public WebElement getLoginDialog() {
-		return driver.findElement(By.className("menu__top__member_beforelogin"));
+
+	public boolean loginDialogDisplay() {
+		return this.loginDialog.isDisplayed();
 	}
 }

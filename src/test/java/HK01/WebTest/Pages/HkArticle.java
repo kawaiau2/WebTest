@@ -1,19 +1,21 @@
 package HK01.WebTest.Pages;
 
-import org.openqa.selenium.By;
+import HK01.WebTest.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import HK01.WebTest.BaseTest;
+import org.openqa.selenium.support.FindBy;
 
-public class HkArticle extends BaseTest{
-	public WebDriver driver;
-	public HkArticle (WebDriver driver){
-		this.driver = driver;
-	}
-	
-	public WebElement getArticleTitle() {
-		return driver.findElement(By.className("article_tit"));
+public class HkArticle extends BasePage {
+	@FindBy (className = "article_tit")
+	private WebElement articleTitle;
+
+    public HkArticle(WebDriver driver) {
+        super(driver);
+    }
+
+	public String getArticleTitle() {
+		return this.articleTitle.getText();
 	}
 
 }

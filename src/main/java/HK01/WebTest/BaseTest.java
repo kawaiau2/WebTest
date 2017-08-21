@@ -7,12 +7,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class BaseTest {
-	public WebDriver driver = null;
+	protected static WebDriver driver;
 	public String targetLink = "https://www.hk01.com/";
 	public enum DriverType {
 		chrome, safari, firefox
 	}
-	
+
 	public String getSectionLink (String sectionName) {
 		return targetLink + "/section/" + sectionName;
 	}

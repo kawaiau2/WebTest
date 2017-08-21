@@ -35,16 +35,16 @@ public class ChannelTest extends BaseTest{
 	
 	@Test
 	public void CheckLoginButtonShow(){
-		channelPage.getMemberButton().click();
-		assertTrue(channelPage.getLoginDialog().isDisplayed());
+		channelPage.clickMemberButton();
+		assertTrue(channelPage.loginDialogDisplay());
 	}
 	
 	@Test
 	public void CheckDate(){
 		DateFormat dateFormat = new SimpleDateFormat("yyyy.M.d");
 		Date date = new Date();
-		System.out.printf(dateFormat.format(date) + "," + channelPage.getPageDate().getText());
-		assertTrue(channelPage.getPageDate().getText().matches(dateFormat.format(date)+"(.*)"));
+		System.out.printf(dateFormat.format(date) + "," + channelPage.getPageDate());
+		assertTrue(channelPage.getPageDate().matches(dateFormat.format(date)+"(.*)"));
 	}
 	
 }
