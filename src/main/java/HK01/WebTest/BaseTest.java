@@ -24,7 +24,7 @@ public class BaseTest {
 	public WebDriver getDriver(DriverType driverType) {
 		switch (driverType) {
 			case chrome:
-				System.setProperty("webdriver.gecko.driver","src//main//resources//chromedriver-mac-64bit");
+				System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver-mac-64bit");
 				driver = new ChromeDriver();
 				break;
 			case safari:
@@ -41,7 +41,7 @@ public class BaseTest {
 	}
 	
 	public WebDriver getDriver() {
-		System.setProperty("webdriver.gecko.driver","src//main//resources//chromedriver-mac-64bit");
+		System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver-mac-64bit");
 		driver = new ChromeDriver();
 		return driver;
 	}
